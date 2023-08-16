@@ -37,7 +37,7 @@
     (unless *api-key*
       (error "Unable to send email to ~A because mailgun:*api-key* is nil" email))
     
-    (post (format nil "https://api.mailgun.net/v3/~A/messages"
+    (post (format nil "https://api.eu.mailgun.net/v3/~A/messages"
                   *domain*)
           :basic-auth (cons "api"
                             (ensure-value-revealed *api-key*))
